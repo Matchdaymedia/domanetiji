@@ -149,6 +149,19 @@ export default function SupportPage() {
                 </Field>
               </div>
 
+              <Field label="Lastschrift-Einzugstermin" required>
+                <div className="space-y-2 rounded-lg border border-border p-3">
+                  <label className="flex items-center gap-2 text-sm text-text-secondary">
+                    <input type="radio" name="einzugstermin" value="01. des Monats" required />
+                    01. des Monats
+                  </label>
+                  <label className="flex items-center gap-2 text-sm text-text-secondary">
+                    <input type="radio" name="einzugstermin" value="15. des Monats" required />
+                    15. des Monats
+                  </label>
+                </div>
+              </Field>
+
               <div className="grid gap-4 md:grid-cols-3">
                 <Field label="Kontoinhaber/in" required>
                   <input name="kontoinhaber" required className="w-full rounded-lg border border-border px-4 py-3 outline-none focus:border-primary focus:ring-2 focus:ring-primary/25" />
