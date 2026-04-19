@@ -149,18 +149,14 @@ export default function SupportPage() {
                 </Field>
               </div>
 
-              <Field label="Lastschrift-Einzugstermin" required>
-                <div className="space-y-2 rounded-lg border border-border p-3">
-                  <label className="flex items-center gap-2 text-sm text-text-secondary">
-                    <input type="radio" name="einzugstermin" value="01. des Monats" required />
-                    01. des Monats
-                  </label>
-                  <label className="flex items-center gap-2 text-sm text-text-secondary">
-                    <input type="radio" name="einzugstermin" value="15. des Monats" required />
-                    15. des Monats
-                  </label>
-                </div>
-              </Field>
+              <div className="rounded-lg border border-border bg-highlight p-4 text-sm text-text-secondary">
+                Der Mitgliedsbeitrag wird standardmäßig zum <strong>01. des Monats</strong> eingezogen.
+                Falls Sie einen anderen Einzugstermin wünschen, schreiben Sie uns bitte über das{' '}
+                <a href="/kontakt" className="text-primary hover:underline">
+                  Kontaktformular
+                </a>
+                .
+              </div>
 
               <div className="grid gap-4 md:grid-cols-3">
                 <Field label="Kontoinhaber/in" required>
