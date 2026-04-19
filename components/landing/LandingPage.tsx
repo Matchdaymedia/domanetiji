@@ -435,6 +435,15 @@ export default function LandingPage() {
                 </MembershipField>
               </div>
 
+              <div className="rounded-xl border border-border bg-[#f7eee3] p-4 text-sm text-text-secondary">
+                Der Mitgliedsbeitrag wird standardmäßig zum <strong>01. des Monats</strong> eingezogen.
+                Falls Sie einen anderen Einzugstermin wünschen, schreiben Sie uns bitte über das{' '}
+                <a href="/#kontakt" className="text-primary hover:underline">
+                  Kontaktformular
+                </a>
+                .
+              </div>
+
               <div className="grid gap-3 sm:gap-4 md:grid-cols-3">
                 <MembershipField label="Kontoinhaber/in" required>
                   <input name="kontoinhaber" required className="w-full rounded-xl border border-border px-4 py-3 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
