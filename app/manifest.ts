@@ -7,6 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description:
       'Domanê Tiji e.V. fördert Bildung, Spracherhalt und soziale Unterstützung in strukturschwachen Regionen.',
     start_url: '/',
+    id: '/',
     display: 'standalone',
     background_color: '#F5F1EB',
     theme_color: '#8B6F47',
