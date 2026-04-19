@@ -12,29 +12,42 @@ export default function ContactForm() {
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle')
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const encode = (data: Record<string, string>) =>
+    Object.keys(data)
+      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+      .join('&')
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    const subject = encodeURIComponent('Kontaktanfrage über Domanê Tiji e.V. Website')
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\n` +
-        `E-Mail: ${formData.email}\n` +
-        `Telefon: ${formData.phone || 'Nicht angegeben'}\n\n` +
-        `Nachricht:\n${formData.message}`
-    )
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'kontaktformular-domane-tiji',
+          ...formData,
+          empfaenger_email: company.email,
+          'bot-field': '',
+        }),
+      })
 
-    window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`
+      if (!response.ok) {
+        throw new Error('Form submission failed')
+      }
 
-    setTimeout(() => {
       setSubmitStatus('success')
-      setIsSubmitting(false)
       setFormData({ name: '', email: '', phone: '', message: '' })
+    } catch {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
       setTimeout(() => setSubmitStatus('idle'), 5000)
-    }, 500)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -45,7 +58,17 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form
+      name="kontaktformular-domane-tiji"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
+      className="space-y-6"
+    >
+      <input type="hidden" name="form-name" value="kontaktformular-domane-tiji" />
+      <input type="hidden" name="bot-field" />
+      <input type="hidden" name="empfaenger_email" value={company.email} />
       <div>
         <label htmlFor="name" className="mb-2 block text-sm font-medium text-text-primary">
           Name <span className="text-red-500">*</span>
@@ -113,7 +136,16 @@ export default function ContactForm() {
         <div className="rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-green-800">
           <p className="font-medium">Vielen Dank für Ihre Nachricht!</p>
           <p className="mt-1 text-sm">
-            Ihr E-Mail-Client sollte sich geöffnet haben. Falls nicht, schreiben Sie uns an {company.email}.
+            Ihre Nachricht wurde erfolgreich übermittelt. Wir melden uns schnellstmöglich bei Ihnen.
+          </p>
+        </div>
+      )}
+
+      {submitStatus === 'error' && (
+        <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-800">
+          <p className="font-medium">Senden fehlgeschlagen</p>
+          <p className="mt-1 text-sm">
+            Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an {company.email}.
           </p>
         </div>
       )}
