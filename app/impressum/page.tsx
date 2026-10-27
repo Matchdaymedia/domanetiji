@@ -17,7 +17,7 @@ export default function ImpressumPage() {
           <Card className="mt-8">
             <div className="space-y-6 text-text-secondary">
               <div>
-                <h2 className="text-2xl text-primary">Angaben gemäß § 5 TMG</h2>
+                <h2 className="text-2xl text-primary">Angaben gemäß § 5 DDG</h2>
                 <p className="mt-3">
                   <strong>{company.name}</strong>
                   <br />
@@ -64,15 +64,10 @@ export default function ImpressumPage() {
               </div>
 
               <div>
-                <h2 className="text-2xl text-primary">Aufsichtsbehörde</h2>
-                <p className="mt-3">{company.legal.supervisoryAuthority}</p>
-              </div>
-
-              <div>
                 <h2 className="text-2xl text-primary">Haftung für Inhalte</h2>
                 <p className="mt-3">
-                  Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen
-                  Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir
+                  Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen
+                  Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir
                   als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
                   Informationen zu überwachen oder nach Umständen zu forschen, die auf eine
                   rechtswidrige Tätigkeit hinweisen.
@@ -96,15 +91,6 @@ export default function ImpressumPage() {
                   unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung,
                   Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts
                   bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl text-primary">Hinweis</h2>
-                <p className="mt-3">
-                  Bitte ergänzen Sie die Platzhalterangaben zu Vertretung, Vereinsregister und
-                  Steuerdaten vor der Veröffentlichung final. Dieser Text ersetzt keine individuelle
-                  Rechtsberatung.
                 </p>
               </div>
             </div>

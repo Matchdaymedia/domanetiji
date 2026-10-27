@@ -5,6 +5,9 @@ import Link from 'next/link'
 import { BookOpen, Languages, Users, GraduationCap, HandHeart, Heart } from 'lucide-react'
 import { mediaConfig } from '@/config/media'
 import { siteConfig } from '@/config/site'
+import ProjectsSection from '@/components/landing/ProjectsSection'
+import InterviewSection from '@/components/landing/InterviewSection'
+import VorstandSection from '@/components/landing/VorstandSection'
 
 const goals = [
   {
@@ -217,6 +220,8 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <VorstandSection />
+
       <section className="section-padding bg-[#fff4e8]">
         <div className="container-custom">
           <div className="mb-7 text-center sm:mb-8">
@@ -291,6 +296,10 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      <ProjectsSection />
+
+      <InterviewSection />
 
       <section id="mitmachen" className="section-padding bg-[#f6e7da]">
         <div className="container-custom">

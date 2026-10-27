@@ -6,9 +6,9 @@ export const company = {
   addressLine: 'Oberhausen, Deutschland',
   region: 'Ost- und Südostanatolien',
   legal: {
-    representative: 'Bitte ergänzen (z. B. Melisa Aksünger, 1. Vorsitzende)',
-    registerCourt: 'Bitte ergänzen (zuständiges Amtsgericht)',
-    registerNumber: 'Bitte ergänzen (VR-Nummer)',
+    representative: 'Ugurcan Aksünger',
+    registerCourt: 'Amtsgericht Duisburg',
+    registerNumber: 'VR 6698',
     vatOrTaxNumber: 'Bitte ergänzen (Steuernummer oder USt-IdNr., falls vorhanden)',
     supervisoryAuthority: 'Nicht erforderlich / falls relevant ergänzen',
   },

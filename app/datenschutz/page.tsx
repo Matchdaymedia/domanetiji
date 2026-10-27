@@ -83,7 +83,30 @@ export default function DatenschutzPage() {
               </div>
 
               <div>
-                <h2 className="text-2xl text-primary">6. Speicherdauer</h2>
+                <h2 className="text-2xl text-primary">6. Eingebettete YouTube-Videos</h2>
+                <p className="mt-3">
+                  Auf unserer Website binden wir Videos der Plattform YouTube ein. Anbieter ist die Google
+                  Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Wir nutzen den
+                  erweiterten Datenschutzmodus (youtube-nocookie.com).
+                </p>
+                <p className="mt-3">
+                  Das Video wird erst geladen, wenn Sie aktiv auf das Vorschaubild klicken. Erst dann wird
+                  eine Verbindung zu den Servern von YouTube hergestellt, wobei insbesondere Ihre IP-Adresse
+                  übertragen wird und YouTube Cookies oder ähnliche Technologien einsetzen kann. Dabei kann
+                  es auch zu einer Übermittlung von Daten in die USA kommen.
+                </p>
+                <p className="mt-3">
+                  Rechtsgrundlage ist Ihre Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO, § 25
+                  Abs. 1 TDDDG). Weitere Informationen finden Sie in der Datenschutzerklärung von Google:{' '}
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    policies.google.com/privacy
+                  </a>
+                  .
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl text-primary">7. Speicherdauer</h2>
                 <p className="mt-3">
                   Wir speichern personenbezogene Daten nur so lange, wie dies für die genannten Zwecke
                   erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.
@@ -91,7 +114,7 @@ export default function DatenschutzPage() {
               </div>
 
               <div>
-                <h2 className="text-2xl text-primary">7. Empfänger von Daten</h2>
+                <h2 className="text-2xl text-primary">8. Empfänger von Daten</h2>
                 <p className="mt-3">
                   Eine Weitergabe an Dritte erfolgt nur, wenn dies gesetzlich erlaubt ist, Sie
                   eingewilligt haben oder externe Dienstleister als Auftragsverarbeiter eingebunden
@@ -100,7 +123,7 @@ export default function DatenschutzPage() {
               </div>
 
               <div>
-                <h2 className="text-2xl text-primary">8. Ihre Rechte</h2>
+                <h2 className="text-2xl text-primary">9. Ihre Rechte</h2>
                 <p className="mt-3">
                   Sie haben im gesetzlichen Rahmen insbesondere das Recht auf Auskunft, Berichtigung,
                   Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.
@@ -111,7 +134,7 @@ export default function DatenschutzPage() {
               </div>
 
               <div>
-                <h2 className="text-2xl text-primary">9. Änderungen dieser Datenschutzerklärung</h2>
+                <h2 className="text-2xl text-primary">10. Änderungen dieser Datenschutzerklärung</h2>
                 <p className="mt-3">
                   Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den
                   aktuellen rechtlichen Anforderungen entspricht. Es gilt die jeweils auf der Website
@@ -120,7 +143,7 @@ export default function DatenschutzPage() {
               </div>
 
               <div>
-                <h2 className="text-2xl text-primary">10. Ergänzende Rechtstexte</h2>
+                <h2 className="text-2xl text-primary">11. Ergänzende Rechtstexte</h2>
                 <p className="mt-3">
                   Weitere rechtliche Informationen finden Sie im{' '}
                   <Link href="/impressum" className="text-primary hover:underline">

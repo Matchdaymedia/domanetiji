@@ -9,6 +9,8 @@ const navItems = [
   { href: '/#ueber-uns', label: 'Über uns' },
   { href: '/#ziele', label: 'Ziele' },
   { href: '/#wirkung', label: 'Wirkung' },
+  { href: '/#projekte', label: 'Projekte' },
+  { href: '/#interview', label: 'Interview' },
   { href: '/#mitmachen', label: 'Mitmachen' },
   { href: '/#kontakt', label: 'Kontakt' },
 ]
