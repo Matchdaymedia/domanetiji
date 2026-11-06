@@ -15,7 +15,7 @@ export const siteConfig = {
   phoneHref: '+491634958244',
   availability: '12–18 Uhr',
   donationLink: '/unterstuetzen',
-  paypalMoneyPoolUrl: 'https://www.paypal.com/pool/9oqv05dFJh',
+  paypalMoneyPoolUrl: 'https://www.paypal.com/pool/9tYWh9fewu',
   membershipLink: '/#aufnahmeantrag',
 }
 
